@@ -1,0 +1,103 @@
+[
+    {
+        "id": "250a7ab6-acca-437c-b72b-7a4db8479c90",
+        "image": "images/products/monitor-omen-gaming.jpg",
+        "name": "HP OMEN 27qs G2 | Monitor gaming 27 polegadas QHD 280 Hz com 1 ms e AMD FreeSync Premium",
+        "oldPriceCents": 499,
+        "newPriceCents": 38526,
+        "discount": 23,
+        "shop": "Amazon",
+        "category": "Gaming"
+    },
+    {
+        "id": "0bb69958-09eb-4a61-8dce-192288425b75",
+        "image": "images/products/michael-kors-reloj.jpg",
+        "name": "Michael Kors Slim Runway | Relógio feminino em aço inoxidável castanho e dourado",
+        "oldPriceCents": 10101,
+        "newPriceCents": 16900,
+        "discount": 40,
+        "shop": "Amazon",
+        "category": "Moda"
+    },
+     {
+        "id":"e0714e40-78a3-46eb-a18c-183b6bf0a4f4",
+        "image": "images/products/cortina-mosquitos-magnetica.jpg",
+        "name": "Sekey Magnetic Mosquito Net | Cortina magnética anti-mosquitos para porta de varanda 150 x 210 cm preta",
+        "oldPriceCents": 2235,
+        "newPriceCents": 896,
+        "discount": 60,
+        "shop": "Amazon",
+        "category": "Casa"
+    },
+     {
+        "id":"f598ca7c-4d00-47ec-b0e1-c4e0deeb98ce",
+        "image": "images/products/pepejeans-sapatilhas.jpg",
+        "name": "Pepe Jeans Kenton MAX | Sapatilhas clássicas casuais unissexo",
+        "oldPriceCents": 6608,
+        "newPriceCents": 2795,
+        "discount": 58,
+        "shop": "Amazon",
+        "category": "Moda"
+    },
+     {
+        "id":"f6a768d4-9970-4699-953a-175589a872c2",
+        "image": "images/products/princess-pipoqueira.jpg",
+        "name": "Princess 292980 | Máquina de pipocas com taça reversível 4,5 L e bandeja para manteiga",
+        "oldPriceCents": 4065,
+        "newPriceCents": 2795,
+        "discount": 31,
+        "shop": "Amazon",
+        "category": "Eletrodomésticos"
+    },
+    {
+        "id":"dd37a25e-5e43-4aad-8ca7-52c99cbf2f42",
+        "image": "images/products/xiaomi-pocof3.jpg",
+        "name": "Xiaomi Poco F3 | Smartphone 6,67'' 120Hz com 128 GB, câmara tripla 48 MP e bateria 4520 mAh",
+        "oldPriceCents": 35578,
+        "newPriceCents": 22460,
+        "discount": 37,
+        "shop": "Amazon",
+        "category": "Tech"
+    },
+    {
+        "id":"6493a950-5395-4891-83b1-01baa41d629a",
+        "image": "images/products/revlon-professional-uniqone.jpg",
+        "name": "Revlon Professional UniqOne | Spray capilar sem enxaguar com 2 unidades de 150 ml",
+        "oldPriceCents": 1493,
+        "newPriceCents": 1269,
+        "discount": 15,
+        "shop": "Amazon",
+        "category": "Saúde e Beleza"
+    },
+    {
+        "id":"80f5d94e-9f71-4711-877b-6aa059989cb0",
+        "image": "images/products/santeco-garrafa-termica.jpg",
+        "name": "SANTECO Stainless Steel | Garrafa térmica em aço inoxidável 1 L com copo, mantém bebidas quentes 12 h e frias 24 h, livre de BPA",
+        "oldPriceCents": 3013,
+        "newPriceCents": 1796,
+        "discount": 40,
+        "shop": "Amazon",
+        "category": "Casa"
+    },
+    {
+        "id":"4fabaf8e-ba0a-4033-a932-87646270b472",
+        "image": "images/products/enerfero-restauradordeplastico.jpg",
+        "name": "Enerfero | Renovador de plásticos e borrachas para automóvel com esponja premium 200 ml",
+        "oldPriceCents": 1299,
+        "newPriceCents": 902,
+        "discount": 31,
+        "shop": "Amazon",
+        "category": "Carros e Motas"
+    },
+    {
+        "id":"cb35743b-c3e2-4837-ba9f-cded50990409",
+        "image": "images/products/havaianas-disney.jpg",
+        "name": "Havaianas Disney | Chinelos unissexo para crianças",
+        "oldPriceCents": 1710,
+        "newPriceCents": 1357,
+        "discount": 21,
+        "shop": "Amazon",
+        "category": "Moda"
+    }
+
+]
