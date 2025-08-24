@@ -12,7 +12,18 @@ function renderProductsGrid() {
                 <img class="product-image"
                     src="${product.image}">
             </div>
+
+            <div class="product-info-container">
+              <div class="product-name limit-text-to-2-lines">
+                ${product.name}
+              </div>
+
+              <div class="product-new-price">
+                ${product.getPrice(product.newPriceCents)}€
+              </div>
+            </div>
         </div> 
+
     `;
   });
 

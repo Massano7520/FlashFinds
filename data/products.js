@@ -1,3 +1,5 @@
+import {formatCurrency} from '../utils/money.js';
+
 class Product {
   id;
   image;
@@ -18,7 +20,14 @@ class Product {
     this.shop = productDetails.shop;
     this.category = productDetails.category;
   }
+
+  getPrice(priceCents) {
+    return formatCurrency(priceCents);
+  }
 }
+
+
+
 
 export let products = [];
 
