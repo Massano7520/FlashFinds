@@ -104,6 +104,7 @@
   object-fit: cover;
 }
 
+
 .product-info-container{
   margin-left: 40px;
   flex-direction: column;
@@ -116,13 +117,42 @@
   
   
 }
+.product-price-row-container {
+  flex-direction: row;
+  display: flex;
+
+  margin-top: 10px;
+
+ 
+  align-items: baseline;
+}
 
 .product-new-price {
-  margin-top: 10px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 25px;
+  color: red;
+  margin-right: 10px;
   
+  
+}
+
+.product-old-price{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+
+  text-decoration: line-through;
+  text-decoration-color: black; /* muda a cor da linha */
+  text-decoration-thickness: 1.5px; /* espessura da linha */
+
+}
+
+.product-discount {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: rgb(23, 206, 23);
 }
 
 

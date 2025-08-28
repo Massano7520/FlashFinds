@@ -17,11 +17,23 @@ function renderProductsGrid() {
               <div class="product-name limit-text-to-2-lines">
                 ${product.name}
               </div>
+            
 
-              <div class="product-new-price">
-                ${product.getPrice(product.newPriceCents)}€
-              </div>
-            </div>
+              <div class="product-price-row-container">
+                <div class="product-new-price">
+                  ${product.getPrice(product.newPriceCents)}€
+                </div>
+
+                <div class="product-old-price">
+                  ${product.getPrice(product.oldPriceCents)}€
+                </div>   
+
+                <div class="product-discount">
+                  ${product.discount}%
+                </div> 
+              </div>      
+            </div>  
+            
         </div> 
 
     `;
