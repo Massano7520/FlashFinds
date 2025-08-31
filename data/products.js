@@ -8,7 +8,7 @@ class Product {
   newPriceCents;
   discount;
   shop;
-  category;
+  link;
 
   constructor(productDetails) {
     this.id = productDetails.id;
@@ -19,6 +19,7 @@ class Product {
     this.discount = productDetails.discount;
     this.shop = productDetails.shop;
     this.category = productDetails.category;
+    this.link = productDetails.link;
   }
 
   getPrice(priceCents) {

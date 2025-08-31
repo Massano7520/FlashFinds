@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(232, 232, 232);
+}
+
 .main {
   margin-top: 60px;
 }
@@ -69,18 +73,21 @@
 */
 
 .product-container {
-  padding-top: 40px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  box-shadow: 0 5px 5px rgba(63, 63, 63, 0.2);
+
+  padding: 10px 30px;
+
 
   border-right: 1px solid rgb(231, 231, 231);
   border-bottom: 1px solid rgb(231, 231, 231);
 
-  border: 5px solid rgb(0, 0, 0);
+  /*border: 5px solid rgb(0, 0, 0);*/
   margin: 10px;
 
   display: flex;
+  align-items: center;
   flex-direction: row;
 }
 
@@ -107,6 +114,7 @@
 
 .product-info-container{
   margin-left: 40px;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -120,11 +128,12 @@
 .product-price-row-container {
   flex-direction: row;
   display: flex;
-
   margin-top: 10px;
-
- 
   align-items: baseline;
+}
+
+.product-price-row-container * {
+  margin-right: 10px;
 }
 
 .product-new-price {
@@ -132,9 +141,6 @@
   font-weight: 700;
   font-size: 25px;
   color: red;
-  margin-right: 10px;
-  
-  
 }
 
 .product-old-price{
@@ -145,15 +151,67 @@
   text-decoration: line-through;
   text-decoration-color: black; /* muda a cor da linha */
   text-decoration-thickness: 1.5px; /* espessura da linha */
-
 }
 
 .product-discount {
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 17px;
-  color: rgb(23, 206, 23);
+  line-height: 1;
+
+  background-color: rgb(143, 233, 162);
+  color: rgb(6, 81, 1);
+  border-radius: 6px;
+  padding: 4px 4px;
+
+  margin-right: 10px;
 }
+
+.product-divider{
+  font-size: 20px;
+}
+
+.product-shop{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; 
+  color: rgb(192, 3, 3);
+
+}
+
+.product-category{
+  font-size: 18px;
+}
+
+.product-shop-link{
+  flex-direction: row;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  background-color: rgb(253, 49, 49);
+  color:rgb(255, 255, 255);
+  border-radius: 25px;
+  padding: 12px 15px;
+
+  width: fit-content;
+}
+
+.product-link-icon{
+  width: 22px;
+  height: 22px;
+
+  margin-left: 5px;
+}
+
+
+
+
+
+
 
 
 
