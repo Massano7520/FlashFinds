@@ -1,4 +1,3 @@
-import {formatCurrency} from '../utils/money.js';
 
 class Product {
   id;
