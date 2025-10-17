@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 
+const productRouter = require('./routes/productRoutes');
+
 const app = express();
 
 // Vai buscar à pasta views um template
@@ -43,5 +45,7 @@ app.use((req, res, next) => {
 //app.delete('/api/v1/tours/:id', deleteTour)
 
 // (3) Routes
+
+app.use('/api/v1/products', productRouter); // todas as rotas definidas dentro do productRoutes vão ter o prefixo do 1º parâmetro
 
 module.exports = app;
