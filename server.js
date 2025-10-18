@@ -6,24 +6,21 @@ const app = require('./app');
 
 const DB = process.env.DATABASE;
 
-async function startServer() {
-  try {
-    await mongoose.connect(DB, {
-      //useNewUrlParser: true,
-      //useUnifiedTopology: trues
-    });
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => {
     console.log('DB connection successful!');
 
+    // Só aqui inicializa o servidor
     const port = process.env.PORT || 4000;
     app.listen(port, () => {
       console.log('App running on port', port);
     });
-  } catch (error) {
-    console.error('DB connection error:', error);
-  }
-}
-
-startServer();
+  })
+  .catch((err) => console.error('DB connection error:', err));
 
 /*
 try {
