@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 
-dotenv.config({ path: './config.env' });
+//dotenv.config({ path: './config.env' });
 const app = require('./app');
+
+if (process.env.NODE_ENV !== 'production') {
+  const dotenv = require('dotenv');
+  dotenv.config({ path: './config.env' });
+}
 
 const DB = process.env.DATABASE;
 console.log(DB);
