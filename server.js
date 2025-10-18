@@ -32,7 +32,32 @@ app.listen(port, () => {
   console.log('app running on port 4000');
 }); */
 
-mongoose
+async function ensureDBConnection() {
+  if (mongoose.connection.readyState === 1) {
+    // Já conectado
+    return;
+  }
+  try {
+    await mongoose.connect(process.env.DATABASE, {
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000 // timeout de 10s
+    });
+    console.log('DB connected in server');
+  } catch (err) {
+    console.error('DB connection error in server:', err);
+    throw err;
+  }
+}
+
+ensureDBConnection.then(() => {
+  const port = process.env.PORT || 4000;
+  app.listen(port, () => {
+    console.log('App running on port', port);
+  });
+});
+
+/* mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -48,7 +73,7 @@ mongoose
     });
   })
   .catch((err) => console.error('DB connection error:', err));
-
+ */
 /*
 try {
   await mongoose

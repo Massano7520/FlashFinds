@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+/*const mongoose = require('mongoose');
 const Product = require('./../models/productModel');
 const formatCurrency = require('../utils/money');
 
-// Função para garantir conexão singleton com Mongoose
+ // Função para garantir conexão singleton com Mongoose
 async function ensureDBConnection() {
   if (mongoose.connection.readyState === 1) {
     // Já conectado
@@ -45,9 +45,9 @@ exports.getOverview = async (req, res) => {
     console.error('Error in getOverview route:', err);
     res.status(500).send('Internal Server Error');
   }
-};
+}; */
 
-/* const Product = require('./../models/productModel');
+const Product = require('./../models/productModel');
 const formatCurrency = require('../utils/money');
 
 exports.getOverview = async (req, res) => {
@@ -62,4 +62,4 @@ exports.getOverview = async (req, res) => {
     title: 'All products',
     products
   });
-}; */
+};
