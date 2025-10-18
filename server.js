@@ -35,7 +35,7 @@ mongoose
   })
   .then(() => {
     console.log('DB connection successful!');
-
+    console.log(mongoose.connection.readyState);
     // Só aqui inicializa o servidor
     const port = process.env.PORT || 4000;
     app.listen(port, () => {
