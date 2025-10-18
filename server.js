@@ -35,8 +35,8 @@ app.listen(port, () => {
 
 mongoose
   .connect(DB, {
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000
   })
   .then(() => {
