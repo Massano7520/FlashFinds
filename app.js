@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 
 const productRouter = require('./routes/productRoutes');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
@@ -47,5 +48,6 @@ app.use((req, res, next) => {
 // (3) Routes
 
 app.use('/api/v1/products', productRouter); // todas as rotas definidas dentro do productRoutes vão ter o prefixo do 1º parâmetro
+app.use('/', viewRouter);
 
 module.exports = app;

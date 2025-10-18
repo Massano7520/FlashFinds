@@ -1,0 +1,30 @@
+//Este template é usado para toda e qualquer página gerada
+
+doctype html
+html 
+  head 
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.')
+    title FlashFinds | #{title}
+    //- link(rel='stylesheet' href='css/style.css')
+    link(rel='shortcut icon' type='image/png' href='images/icons/FlashFindsIcon.png')
+    link(rel='stylesheet' href='styles/_header.css')
+    link(rel='stylesheet' href='styles/general.css')
+    link(rel='stylesheet' href='styles/flashfinds.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap')
+
+  body
+    // HEADER
+    include _header
+
+    // CONTENT
+    block content 
+      h1 This is a placeholder heading
+
+    // FOOTER 
+    //- include _footer
+
+
+
+
+

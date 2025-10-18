@@ -1,0 +1,29 @@
+extends base
+
+block content 
+  .main
+    .products-grid
+      .background
+        each product in products
+          .product-container
+            .product-image-container 
+              img.product-image(src=product.image)
+            .product-info-container
+              .product-name.limit-text-to-2-lines= product.name 
+              .product-price-row-container
+                .product-new-price
+                  | #{product.newPriceEuros}€
+                .product-old-price 
+                  | #{product.oldPriceEuros}€
+                .product-discount   
+                  |#{product.discount}%
+                .product-divider |
+                .product-category= product.category 
+              a.button-link(href=product.link)
+                .product-shop-link.button-primary 
+                  | Comprar na #{product.shop}
+                  img.product-link-icon(src="images/icons/link-icon.png")
+              
+                
+
+
