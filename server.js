@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const app = require('./app');
 //const dotenv = require('dotenv');
 
 //dotenv.config({ path: './config.env' });
@@ -10,7 +11,23 @@ if (process.env.NODE_ENV !== 'production') {
 
 const DB = process.env.DATABASE;
 
-async function ensureDBConnection() {
+mongoose
+  .connect(DB, {
+    //useNewUrlParser: true,
+    //useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000
+  })
+  .then(() => {
+    console.log('DB connection successful!');
+    // Só aqui inicializa o servidor
+    const port = process.env.PORT || 4000;
+    app.listen(port, () => {
+      console.log('App running on port', port);
+    });
+  })
+  .catch((err) => console.error('DB connection error:', err));
+
+/* async function ensureDBConnection() {
   if (mongoose.connection.readyState === 1) {
     // Já conectado
     return;
@@ -30,11 +47,10 @@ async function ensureDBConnection() {
 
 ensureDBConnection().then(() => {
   const port = process.env.PORT || 4000;
-  const app = require('./app');
   app.listen(port, () => {
     console.log('App running on port', port);
   });
-});
+}); */
 
 /* execute: async () => {
   let timeout = 25;
@@ -57,23 +73,6 @@ app.listen(port, () => {
   console.log('app running on port 4000');
 }); */
 
-/* mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000
-  })
-  .then(() => {
-    console.log('DB connection successful!');
-    console.log(mongoose.connection.readyState);
-    // Só aqui inicializa o servidor
-    const port = process.env.PORT || 4000;
-    app.listen(port, () => {
-      console.log('App running on port', port);
-    });
-  })
-  .catch((err) => console.error('DB connection error:', err));
- */
 /*
 try {
   await mongoose

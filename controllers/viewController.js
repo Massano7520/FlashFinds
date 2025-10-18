@@ -1,25 +1,7 @@
-/*const mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const ensureDBConnection = require('./../utils/ensure-db-connection');
 const Product = require('./../models/productModel');
 const formatCurrency = require('../utils/money');
-
- // Função para garantir conexão singleton com Mongoose
-async function ensureDBConnection() {
-  if (mongoose.connection.readyState === 1) {
-    // Já conectado
-    return;
-  }
-  try {
-    await mongoose.connect(process.env.DATABASE, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 10000 // timeout de 10s
-    });
-    console.log('DB connected in getOverview');
-  } catch (err) {
-    console.error('DB connection error in getOverview:', err);
-    throw err;
-  }
-}
 
 exports.getOverview = async (req, res) => {
   try {
@@ -45,9 +27,9 @@ exports.getOverview = async (req, res) => {
     console.error('Error in getOverview route:', err);
     res.status(500).send('Internal Server Error');
   }
-}; */
+};
 
-const Product = require('./../models/productModel');
+/* const Product = require('./../models/productModel');
 const formatCurrency = require('../utils/money');
 
 exports.getOverview = async (req, res) => {
@@ -63,3 +45,4 @@ exports.getOverview = async (req, res) => {
     products
   });
 };
+ */
