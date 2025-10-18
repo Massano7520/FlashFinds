@@ -11,7 +11,7 @@ exports.getOverview = async (req, res) => {
     // Faz a query
     let products = await Product.find();
 
-    // Formata preços
+    // Formata preços.
     products = products.map((p) => ({
       ...p._doc,
       newPriceEuros: formatCurrency(p.newPriceCents),
