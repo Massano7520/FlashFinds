@@ -10,7 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const DB = process.env.DATABASE;
-console.log(DB);
 
 /* execute: async () => {
   let timeout = 25;
