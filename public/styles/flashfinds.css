@@ -1,24 +1,27 @@
 body {
   background-color: rgb(232, 232, 232);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* remove scroll horizontal */
+  width: 100%;
 }
 
 .main {
-  margin-top: 60px;
+  margin: 60px auto 0 auto; /* topo 60px, depois centralizado */
+  max-width: 1200px; /* limita a largura do conteúdo */
+  width: 100%;
+  padding: 0 20px; /* deixa espaço nas laterais em telas pequenas */
+  box-sizing: border-box;
 }
 
 .products-grid {
   display: grid;
-
-  /* - In CSS Grid, 1fr means a column will take up the
-       remaining space in the grid.
-     - If we write 1fr 1fr ... 1fr; 8 times, this will
-       divide the grid into 8 columns, each taking up an
-       equal amount of the space.
-     - repeat(8, 1fr); is a shortcut for repeating "1fr"
-       8 times (instead of typing out "1fr" 8 times).
-       repeat(...) is a special property that works with
-       display: grid; */
-  grid-template-columns: repeat(1, 1fr);
+  justify-content: center; /* centraliza o grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1000px;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 /* @media is used to create responsive design (making the
@@ -83,9 +86,7 @@ body {
   border-bottom: 1px solid rgb(231, 231, 231);
 
   /*border: 5px solid rgb(0, 0, 0);*/
-  margin: 10px;
-  margin-left: 350px;
-  margin-right: 350px;
+  margin: 15px 0;
 
   display: flex;
   align-items: center;
@@ -93,14 +94,14 @@ body {
 }
 
 .product-image-container {
-  width: 250px;
+  width: 25%;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
-  margin-bottom: 20px;
+  min-width: 150px;
   flex-shrink: 0;
 }
 
@@ -124,15 +125,15 @@ body {
 }
 
 .product-info-container {
-  margin-left: 40px;
+  margin-left: 5%;
   align-items: center;
   flex-direction: column;
 }
 
 .product-name {
+  font-size: clamp(18px, 2vw, 25px);
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 25px;
 }
 .product-price-row-container {
   flex-direction: row;
@@ -194,7 +195,7 @@ body {
 .product-shop-link {
   flex-direction: row;
   display: flex;
-  margin-top: 30px;
+  margin-top: 15px;
   align-items: center;
 
   font-size: 22px;
@@ -206,6 +207,7 @@ body {
   padding: 12px 15px;
 
   width: fit-content;
+  display: inline-block;
 }
 
 .product-link-icon {
@@ -213,6 +215,8 @@ body {
   height: 22px;
 
   margin-left: 5px;
+  position: relative;
+  top: 3px;
 }
 
 .product-rating-container {

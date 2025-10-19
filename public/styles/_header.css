@@ -1,5 +1,5 @@
 .flashfinds-header {
-  background-color: rgba(255,203,0);
+  background-color: rgba(255, 203, 0);
   color: white;
 
   display: flex; /*ajusta o tamanho aos elementos*/
@@ -12,17 +12,12 @@
   right: 0;
   height: 60px;
 
-  margin: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .flashfinds-header-left-section {
-  width: 180px;
-}
-
-@media (max-width: 800px) {
-  .amazon-header-left-section {
-    width: unset;
-  }
+  flex: 0 0 auto;
 }
 
 .header-link {

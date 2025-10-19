@@ -1,7 +1,11 @@
-
-.button-primary{
+.button-primary {
   cursor: pointer;
+  display: inline-block;
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  border: 1px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .button-primary:hover {
@@ -12,4 +16,3 @@
 .button-link {
   text-decoration: none; /*para remover o sublinhado do link*/
 }
-
