@@ -11,6 +11,7 @@ async function ensureDBConnection() {
       '<db_password>',
       process.env.DATABASE_PASSWORD
     );
+    console.log('DB STRING:', DB);
     await mongoose.connect(DB, {
       //useNewUrlParser: true,
       //useUnifiedTopology: true,
