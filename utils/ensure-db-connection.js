@@ -7,7 +7,11 @@ async function ensureDBConnection() {
     return;
   }
   try {
-    await mongoose.connect(process.env.DATABASE, {
+    const DB = process.env.DATABASE.replace(
+      '<db_password>',
+      process.env.DATABASE_PASSWORD
+    );
+    await mongoose.connect(DB, {
       //useNewUrlParser: true,
       //useUnifiedTopology: true,
       serverSelectionTimeoutMS: 10000 // timeout de 10s

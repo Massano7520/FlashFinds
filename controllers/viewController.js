@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const ensureDBConnection = require('./../utils/ensure-db-connection');
 const Product = require('./../models/productModel');
 const formatCurrency = require('../utils/money');

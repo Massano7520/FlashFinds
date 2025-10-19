@@ -1,20 +1,16 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const app = require('./app');
-//const dotenv = require('dotenv');
 
-//dotenv.config({ path: './config.env' });
+dotenv.config({ path: './config.env' });
 
-if (process.env.NODE_ENV !== 'production') {
-  const dotenv = require('dotenv');
-  dotenv.config({ path: './config.env' });
-}
-
-const DB = process.env.DATABASE;
+const DB = process.env.DATABASE.replace(
+  '<db_password>',
+  process.env.DATABASE_PASSWORD
+);
 
 mongoose
   .connect(DB, {
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000
   })
   .then(() => {
