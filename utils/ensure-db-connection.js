@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Função para garantir conexão singleton com Mongoose
+// Função para garantir conexão singleton com Mongoose.
 async function ensureDBConnection() {
   if (mongoose.connection.readyState === 1) {
     // Já conectado
