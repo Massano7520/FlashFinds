@@ -1,18 +1,15 @@
-body {
-  margin: 0; /* remove margens padrão */
-  padding: 0;
-}
-
 .footer {
   background-color: #000;
   padding: 1.5rem 2rem; /* reduz ligeiramente o espaço interno */
   font-size: 1.2rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-items: center; /* centra o conteúdo na grid */
   width: 100%; /* ocupa toda a largura */
   border: none; /* garante que não há borda */
   box-shadow: none;
+  min-width: 1000px; /*isto evita que fique cortado quando diminuo a largura da 
+  página*/
 }
 
 .footer_disclaimer {

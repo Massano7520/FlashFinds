@@ -1,40 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(232, 232, 232);
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* remove scroll horizontal */
+  margin: auto;
   width: 100%;
+  /* max-width: 1000px; */
+  /* min-width: 1000px; */
 }
 
 .main {
-  margin: 60px auto 0 auto; /* topo 60px, depois centralizado */
-  max-width: 1200px; /* limita a largura do conteúdo */
+  /* max-width: 1200px; */ /* limita a largura do conteúdo */
   width: 100%;
-  padding: 0 20px; /* deixa espaço nas laterais em telas pequenas */
-  box-sizing: border-box;
 }
 
 .products-grid {
   display: grid;
   justify-content: center; /* centraliza o grid */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  max-width: 1000px;
+  align-items: center;
+  grid-template-rows: repeat(3, minmax(300px, 1fr));
+
+  /*   min-width: 800px; */
   gap: 20px;
-  padding: 20px;
-  margin: 0 auto;
+  min-width: 1000px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin: 100px 250px;
 }
 
 /* @media is used to create responsive design (making the
    website look good on any screen size). This @media
    means when the screen width is 2000px or less, we
    will divide the grid into 7 columns instead of 8. */
-/*@media (max-width: 2000px) {
+/* @media (max-width: 700px) {
   .products-grid {
-    grid-template-columns: repeat(7, 1fr);
   }
-}
-
-
+} */
 
 /* This @media means when the screen width is 1600px or
    less, we will divide the grid into 6 columns. */
@@ -85,23 +89,30 @@ body {
   border-right: 1px solid rgb(231, 231, 231);
   border-bottom: 1px solid rgb(231, 231, 231);
 
-  /*border: 5px solid rgb(0, 0, 0);*/
-  margin: 15px 0;
-
   display: flex;
   align-items: center;
   flex-direction: row;
+
+  /* max-width: 0%;
+  min-width: 100%;
+  width: 100%; */
+  object-fit: contain;
+
+  /* flex-wrap: wrap; */
 }
 
 .product-image-container {
-  width: 25%;
-  height: 200px;
+  aspect-ratio: 1 / 1;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
   min-width: 150px;
+  max-height: 300px;
   flex-shrink: 0;
 }
 
@@ -119,15 +130,17 @@ body {
     so they stay inside their container. */
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   overflow: hidden;
   display: block;
 }
 
 .product-info-container {
+  flex: 1;
   margin-left: 5%;
-  align-items: center;
   flex-direction: column;
+  display: flex;
+  object-fit: contain;
 }
 
 .product-name {
@@ -207,7 +220,8 @@ body {
   padding: 12px 15px;
 
   width: fit-content;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
 
 .product-link-icon {

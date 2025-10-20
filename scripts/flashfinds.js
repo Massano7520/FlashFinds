@@ -7,7 +7,7 @@ function renderProductsGrid() {
 
   products.forEach((product) => {
     productsHTML += `
-      <div class="background">
+      <div class="products-grid">
         <div class="product-container">
             <div class="product-image-container">
                 <img class="product-image"
@@ -64,7 +64,3 @@ function renderProductsGrid() {
 
   document.querySelector('.js-products-grid').innerHTML = productsHTML;
 }
-
-
-
-
