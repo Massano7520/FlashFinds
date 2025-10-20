@@ -8,8 +8,10 @@
   width: 100%; /* ocupa toda a largura */
   border: none; /* garante que não há borda */
   box-shadow: none;
-  min-width: 1000px; /*isto evita que fique cortado quando diminuo a largura da 
+  /* min-width: 1000px; */ /*isto evita que fique cortado quando diminuo a largura da 
   página*/
+
+  box-sizing: border-box;
 }
 
 .footer_disclaimer {

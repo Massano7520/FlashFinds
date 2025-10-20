@@ -6,7 +6,7 @@ body {
   background-color: rgb(232, 232, 232);
   margin: 0;
   padding: 0;
-  margin: auto;
+  /*   margin: auto; */
   width: 100%;
   /* max-width: 1000px; */
   /* min-width: 1000px; */
@@ -24,9 +24,7 @@ body {
 
   /*   min-width: 800px; */
   gap: 20px;
-  min-width: 1000px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  /* min-width: 1000px; */
   margin: 100px 250px;
 }
 
@@ -34,10 +32,17 @@ body {
    website look good on any screen size). This @media
    means when the screen width is 2000px or less, we
    will divide the grid into 7 columns instead of 8. */
-/* @media (max-width: 700px) {
+@media (max-width: 1300px) {
   .products-grid {
+    margin: 100px 10px;
   }
-} */
+}
+
+@media (max-width: 800px) {
+  .products-grid {
+    margin: 100px 10px;
+  }
+}
 
 /* This @media means when the screen width is 1600px or
    less, we will divide the grid into 6 columns. */
@@ -109,9 +114,9 @@ body {
   align-items: center;
   overflow: hidden;
 
-  min-width: 150px;
+  min-width: 100px;
   max-width: 200px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 /*
