@@ -21,7 +21,6 @@ body {
   display: grid;
   justify-content: center; /* centraliza o grid */
   align-items: center;
-  grid-template-rows: repeat(3, minmax(300px, 1fr));
 
   /*   min-width: 800px; */
   gap: 20px;
@@ -103,7 +102,6 @@ body {
 
 .product-image-container {
   aspect-ratio: 1 / 1;
-  max-width: 300px;
   width: 100%;
   height: auto;
   display: flex;
@@ -112,7 +110,7 @@ body {
   overflow: hidden;
 
   min-width: 150px;
-  max-height: 300px;
+  max-width: 200px;
   flex-shrink: 0;
 }
 
